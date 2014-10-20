@@ -7,22 +7,25 @@ var empty;
 //     console.log (newArray[i]);
 //   };
 
-// c.newMap = function(array){
-//   for(i=0; i<array.length; i++){
-//       // console.log (array[i]);
-//   };
-//     empty.push(array);
-//     // console.log(array);
-//
-// };
+
+//map//////////////////////////////////
+c.newMap = function(array){
+   for(i=0; i<array.length; i++){
+       // console.log (array[i]);
+   };
+     empty.push(array);
+     // console.log(array);
+
+ };
 
 
 // _.size//////////////////////////////////////////////
 c.size = function(list){
+  if (list == null) return false;
   console.log(list.length);
 };
 
-c.size(newArray2);
+// c.size(list);
 
 //_.isEmpty/////////////////////////////////////////////
 c.empty= function(obj){
@@ -41,9 +44,22 @@ else{
 }
 };
 
-
+//contains///////////////////////////////////////////////
 c.contains= function(array,y){
   array.forEach(function(z){
     if (y === z) console.log(true);
   });
+};
+
+////_.clone////////////////////////////////////////////////
+c.clone = function(x){
+  return(x);
+};
+
+//////_.matches///////////////////////////////////////////
+c.matches= function(x,y){
+  x.forEach(function(z){
+    if (y == z) console.log (true);
+  })
+
 };

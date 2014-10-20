@@ -9,18 +9,44 @@ body {
   color: #333;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.container{
+  max-width: 1024px;
+  /* min-width: 300px; */
+  margin: 0 auto;
+  background-color: gray;
+  .left-unit{
+    background-color: lightgray;
+    float: left;
+    width: 35%;
   }
+  .right-unit{
+    background-color: darkgray;
+    float: right;
+    width: 65%;
+
+  }
+}
+//with media query you tell it what it will be targeting, and what it will do with the target once it reaches a certain point
+@media (max-width: 500px){
+  .container{
+  .right-unit, .left-unit{
+    float: none;
+    width: 100%;
+  }
+}
+}
+//^once the width reaches 500px or under, take off the float and apply a width of 100% for both (so divs become stacked @ full width)
+
+//starting with mobile first, build from smallest screen to largest=less media queries, and more functionality
+
+@media (min-width: 500px){
+  .container{
+  .right-unit{
+    width: 35%;
+  }
+  .left-unit{
+    width: 65%;
+
+  }
+}
 }
