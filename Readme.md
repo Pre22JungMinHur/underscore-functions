@@ -1,3 +1,3 @@
-## Yo, I'm a Readme
+## Underscore Functions
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+Practice recreating underscore functions using only Javascript.
